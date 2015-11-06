@@ -1,0 +1,520 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2046D7431BAE6A0000FFACF9 /* SpotifyControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 2046D7421BAE6A0000FFACF9 /* SpotifyControls.m */; };
+		2046D7471BB09DC300FFACF9 /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = 2046D7461BB09DC300FFACF9 /* Song.m */; };
+		20667DA51BAE0BDF00AE2C14 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20667DA41BAE0BDF00AE2C14 /* AppDelegate.m */; };
+		20667DA81BAE0BDF00AE2C14 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20667DA71BAE0BDF00AE2C14 /* main.m */; };
+		20667DAA1BAE0BDF00AE2C14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20667DA91BAE0BDF00AE2C14 /* Assets.xcassets */; };
+		20667DAD1BAE0BDF00AE2C14 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20667DAB1BAE0BDF00AE2C14 /* MainMenu.xib */; };
+		20667DB81BAE0BDF00AE2C14 /* GroupifyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20667DB71BAE0BDF00AE2C14 /* GroupifyTests.m */; };
+		208C84221BE9B34F0045FAF2 /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 208C84211BE9B34F0045FAF2 /* Queue.m */; };
+		208C84231BE9B34F0045FAF2 /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 208C84211BE9B34F0045FAF2 /* Queue.m */; };
+		209652A01BEC7252002CC459 /* MusicPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2096529E1BEC7252002CC459 /* MusicPlayerViewController.m */; };
+		209652A11BEC7252002CC459 /* MusicPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2096529E1BEC7252002CC459 /* MusicPlayerViewController.m */; };
+		209652A21BEC7252002CC459 /* MusicPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2096529F1BEC7252002CC459 /* MusicPlayerViewController.xib */; };
+		209652A31BEC7252002CC459 /* MusicPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2096529F1BEC7252002CC459 /* MusicPlayerViewController.xib */; };
+		3DB0C39AB613B53A2E755BAA /* libPods-Groupify.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F57D293028F65421761FC836 /* libPods-Groupify.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		20667DB41BAE0BDF00AE2C14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20667D981BAE0BDF00AE2C14 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 20667D9F1BAE0BDF00AE2C14;
+			remoteInfo = Groupify;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2046D7411BAE6A0000FFACF9 /* SpotifyControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpotifyControls.h; sourceTree = "<group>"; };
+		2046D7421BAE6A0000FFACF9 /* SpotifyControls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpotifyControls.m; sourceTree = "<group>"; };
+		2046D7451BB09DC300FFACF9 /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
+		2046D7461BB09DC300FFACF9 /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
+		20667DA01BAE0BDF00AE2C14 /* Groupify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Groupify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		20667DA31BAE0BDF00AE2C14 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		20667DA41BAE0BDF00AE2C14 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		20667DA71BAE0BDF00AE2C14 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		20667DA91BAE0BDF00AE2C14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		20667DAC1BAE0BDF00AE2C14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		20667DAE1BAE0BDF00AE2C14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20667DB31BAE0BDF00AE2C14 /* GroupifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroupifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		20667DB71BAE0BDF00AE2C14 /* GroupifyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupifyTests.m; sourceTree = "<group>"; };
+		20667DB91BAE0BDF00AE2C14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		208C84201BE9B34F0045FAF2 /* Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
+		208C84211BE9B34F0045FAF2 /* Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Queue.m; sourceTree = "<group>"; };
+		2096529D1BEC7252002CC459 /* MusicPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicPlayerViewController.h; sourceTree = "<group>"; };
+		2096529E1BEC7252002CC459 /* MusicPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicPlayerViewController.m; sourceTree = "<group>"; };
+		2096529F1BEC7252002CC459 /* MusicPlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicPlayerViewController.xib; sourceTree = "<group>"; };
+		67CDD82F8139141C487EF5D5 /* Pods-Groupify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Groupify.release.xcconfig"; path = "Pods/Target Support Files/Pods-Groupify/Pods-Groupify.release.xcconfig"; sourceTree = "<group>"; };
+		7BF2320EBD730D4509B19068 /* Pods-Groupify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Groupify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Groupify/Pods-Groupify.debug.xcconfig"; sourceTree = "<group>"; };
+		F57D293028F65421761FC836 /* libPods-Groupify.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Groupify.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		20667D9D1BAE0BDF00AE2C14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DB0C39AB613B53A2E755BAA /* libPods-Groupify.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20667DB01BAE0BDF00AE2C14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2046D7441BB09DAA00FFACF9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2046D7451BB09DC300FFACF9 /* Song.h */,
+				2046D7461BB09DC300FFACF9 /* Song.m */,
+				208C84201BE9B34F0045FAF2 /* Queue.h */,
+				208C84211BE9B34F0045FAF2 /* Queue.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		20667D971BAE0BDF00AE2C14 = {
+			isa = PBXGroup;
+			children = (
+				20667DA21BAE0BDF00AE2C14 /* Groupify */,
+				20667DB61BAE0BDF00AE2C14 /* GroupifyTests */,
+				20667DA11BAE0BDF00AE2C14 /* Products */,
+				79A001565924F67ACBB50730 /* Pods */,
+				B43E44B14964B76AD14A82BA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		20667DA11BAE0BDF00AE2C14 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20667DA01BAE0BDF00AE2C14 /* Groupify.app */,
+				20667DB31BAE0BDF00AE2C14 /* GroupifyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20667DA21BAE0BDF00AE2C14 /* Groupify */ = {
+			isa = PBXGroup;
+			children = (
+				20667DA31BAE0BDF00AE2C14 /* AppDelegate.h */,
+				20667DA41BAE0BDF00AE2C14 /* AppDelegate.m */,
+				209652981BEC3A18002CC459 /* Controllers */,
+				2046D7441BB09DAA00FFACF9 /* Models */,
+				20667DA91BAE0BDF00AE2C14 /* Assets.xcassets */,
+				20667DAB1BAE0BDF00AE2C14 /* MainMenu.xib */,
+				20667DAE1BAE0BDF00AE2C14 /* Info.plist */,
+				20667DA61BAE0BDF00AE2C14 /* Supporting Files */,
+			);
+			path = Groupify;
+			sourceTree = "<group>";
+		};
+		20667DA61BAE0BDF00AE2C14 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				20667DA71BAE0BDF00AE2C14 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		20667DB61BAE0BDF00AE2C14 /* GroupifyTests */ = {
+			isa = PBXGroup;
+			children = (
+				20667DB71BAE0BDF00AE2C14 /* GroupifyTests.m */,
+				20667DB91BAE0BDF00AE2C14 /* Info.plist */,
+			);
+			path = GroupifyTests;
+			sourceTree = "<group>";
+		};
+		209652981BEC3A18002CC459 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2046D7411BAE6A0000FFACF9 /* SpotifyControls.h */,
+				2046D7421BAE6A0000FFACF9 /* SpotifyControls.m */,
+				2096529D1BEC7252002CC459 /* MusicPlayerViewController.h */,
+				2096529E1BEC7252002CC459 /* MusicPlayerViewController.m */,
+				2096529F1BEC7252002CC459 /* MusicPlayerViewController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		79A001565924F67ACBB50730 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7BF2320EBD730D4509B19068 /* Pods-Groupify.debug.xcconfig */,
+				67CDD82F8139141C487EF5D5 /* Pods-Groupify.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B43E44B14964B76AD14A82BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F57D293028F65421761FC836 /* libPods-Groupify.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		20667D9F1BAE0BDF00AE2C14 /* Groupify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20667DBC1BAE0BDF00AE2C14 /* Build configuration list for PBXNativeTarget "Groupify" */;
+			buildPhases = (
+				F6219456102C05089F4C9FBB /* Check Pods Manifest.lock */,
+				20667D9C1BAE0BDF00AE2C14 /* Sources */,
+				20667D9D1BAE0BDF00AE2C14 /* Frameworks */,
+				20667D9E1BAE0BDF00AE2C14 /* Resources */,
+				FD9B2D879610EA0AFE6C8DCD /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Groupify;
+			productName = Groupify;
+			productReference = 20667DA01BAE0BDF00AE2C14 /* Groupify.app */;
+			productType = "com.apple.product-type.application";
+		};
+		20667DB21BAE0BDF00AE2C14 /* GroupifyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20667DBF1BAE0BDF00AE2C14 /* Build configuration list for PBXNativeTarget "GroupifyTests" */;
+			buildPhases = (
+				20667DAF1BAE0BDF00AE2C14 /* Sources */,
+				20667DB01BAE0BDF00AE2C14 /* Frameworks */,
+				20667DB11BAE0BDF00AE2C14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				20667DB51BAE0BDF00AE2C14 /* PBXTargetDependency */,
+			);
+			name = GroupifyTests;
+			productName = GroupifyTests;
+			productReference = 20667DB31BAE0BDF00AE2C14 /* GroupifyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20667D981BAE0BDF00AE2C14 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "8-bit best team";
+				TargetAttributes = {
+					20667D9F1BAE0BDF00AE2C14 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = C44H669AX9;
+					};
+					20667DB21BAE0BDF00AE2C14 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 20667D9F1BAE0BDF00AE2C14;
+					};
+				};
+			};
+			buildConfigurationList = 20667D9B1BAE0BDF00AE2C14 /* Build configuration list for PBXProject "Groupify" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 20667D971BAE0BDF00AE2C14;
+			productRefGroup = 20667DA11BAE0BDF00AE2C14 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				20667D9F1BAE0BDF00AE2C14 /* Groupify */,
+				20667DB21BAE0BDF00AE2C14 /* GroupifyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		20667D9E1BAE0BDF00AE2C14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20667DAA1BAE0BDF00AE2C14 /* Assets.xcassets in Resources */,
+				209652A21BEC7252002CC459 /* MusicPlayerViewController.xib in Resources */,
+				20667DAD1BAE0BDF00AE2C14 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20667DB11BAE0BDF00AE2C14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				209652A31BEC7252002CC459 /* MusicPlayerViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F6219456102C05089F4C9FBB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FD9B2D879610EA0AFE6C8DCD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Groupify/Pods-Groupify-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		20667D9C1BAE0BDF00AE2C14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				208C84221BE9B34F0045FAF2 /* Queue.m in Sources */,
+				209652A01BEC7252002CC459 /* MusicPlayerViewController.m in Sources */,
+				2046D7471BB09DC300FFACF9 /* Song.m in Sources */,
+				2046D7431BAE6A0000FFACF9 /* SpotifyControls.m in Sources */,
+				20667DA81BAE0BDF00AE2C14 /* main.m in Sources */,
+				20667DA51BAE0BDF00AE2C14 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20667DAF1BAE0BDF00AE2C14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20667DB81BAE0BDF00AE2C14 /* GroupifyTests.m in Sources */,
+				209652A11BEC7252002CC459 /* MusicPlayerViewController.m in Sources */,
+				208C84231BE9B34F0045FAF2 /* Queue.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		20667DB51BAE0BDF00AE2C14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 20667D9F1BAE0BDF00AE2C14 /* Groupify */;
+			targetProxy = 20667DB41BAE0BDF00AE2C14 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		20667DAB1BAE0BDF00AE2C14 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20667DAC1BAE0BDF00AE2C14 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		20667DBA1BAE0BDF00AE2C14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		20667DBB1BAE0BDF00AE2C14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		20667DBD1BAE0BDF00AE2C14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BF2320EBD730D4509B19068 /* Pods-Groupify.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Groupify/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nikiwells.Groupify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		20667DBE1BAE0BDF00AE2C14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67CDD82F8139141C487EF5D5 /* Pods-Groupify.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Groupify/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nikiwells.Groupify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		20667DC01BAE0BDF00AE2C14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = GroupifyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nikiwells.GroupifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Groupify.app/Contents/MacOS/Groupify";
+			};
+			name = Debug;
+		};
+		20667DC11BAE0BDF00AE2C14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = GroupifyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nikiwells.GroupifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Groupify.app/Contents/MacOS/Groupify";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		20667D9B1BAE0BDF00AE2C14 /* Build configuration list for PBXProject "Groupify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20667DBA1BAE0BDF00AE2C14 /* Debug */,
+				20667DBB1BAE0BDF00AE2C14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20667DBC1BAE0BDF00AE2C14 /* Build configuration list for PBXNativeTarget "Groupify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20667DBD1BAE0BDF00AE2C14 /* Debug */,
+				20667DBE1BAE0BDF00AE2C14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20667DBF1BAE0BDF00AE2C14 /* Build configuration list for PBXNativeTarget "GroupifyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20667DC01BAE0BDF00AE2C14 /* Debug */,
+				20667DC11BAE0BDF00AE2C14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20667D981BAE0BDF00AE2C14 /* Project object */;
+}
