@@ -36,7 +36,7 @@
     self.statusItem.button.action = @selector(printToConsole);
     
     // create the NSURLRequest that will be sent as the handshake
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"ws://shroba.io:7136"]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"ws://shroba.io:4545"]];
     
     // create the socket and assign delegate
     self.socket = [PSWebSocket clientSocketWithRequest:request];
@@ -51,7 +51,9 @@
     self.window.contentView.frame = ((NSView *) self.window.contentView).bounds;
     
     self.mainControls = [[SpotifyControls alloc] initWithMusicPlayerViewController:self.musicPlayerVC];
-    [self.mainControls playMusic];
+    
+    NSString *jsonInfo = [NSString stringWithContentsOfFile:[@"~/test_data.json" stringByExpandingTildeInPath] encoding:NSUTF8StringEncoding error:nil];
+    [self.mainControls updateQueue:jsonInfo];
 }
 
 - (void)printToConsole {
@@ -73,6 +75,14 @@
     if ([playbackState isEqualToString:@"Paused"] && duration - position <= 1) {
         [self.mainControls playNextSong];
     }
+    [self updateHostWithPlaybackState:playbackState andPlayerPositon:position];
+}
+
+- (void)updateHostWithPlaybackState:(NSString *)playbackState andPlayerPositon:(int)position
+{
+    NSDate *relativeStart = [[NSDate date] dateByAddingTimeInterval:-1 * position];
+    NSString *updateString = [NSString stringWithFormat:@"{ \"action\": \"ping\", \"identity\": \"host\", \"data\": { \"relativeStartTime\": \"%@\", \"playerState\": \"%@\"}}", relativeStart, playbackState];
+    [self.socket send:updateString];
 }
 
 
@@ -80,11 +90,25 @@
 
 - (void)webSocketDidOpen:(PSWebSocket *)webSocket {
     NSLog(@"The websocket handshake completed and is now open!");
-    [webSocket send:@"{ \"action\": \"ping\", \"data\": { \"message\": \"Hi there backend!\"} }"];
+    [webSocket send:@"{ \"action\": \"ping\", \"identity\": \"host\", \"data\": { \"message\": \"Hi there backend!\"} }"];
+    sleep(10);
+    NSString *jsonInfo = [NSString stringWithContentsOfFile:[@"~/test_immediate_song_data.json" stringByExpandingTildeInPath] encoding:NSUTF8StringEncoding error:nil];
+    [self webSocket:self.socket didReceiveMessage:jsonInfo];
 }
 - (void)webSocket:(PSWebSocket *)webSocket didReceiveMessage:(id)message {
     NSLog(@"The websocket received a message: %@", message);
-    [self.mainControls playMusic];
+    id queueJSONObject = [NSJSONSerialization JSONObjectWithData:[message dataUsingEncoding:NSUTF8StringEncoding]
+                                                         options:0
+                                                           error:nil];
+    NSDictionary *data = (NSDictionary *)queueJSONObject;
+    NSString *action = data[@"action"];
+    if ([action isEqualToString:@"update"]) {
+        NSArray *songs = data[@"data"][@"songs"];
+        [self.mainControls updateQueueWithArray:songs];
+    } else if ([action isEqualToString:@"playImmediately"]) {
+        NSDictionary *songData =data[@"data"][@"song"];
+        [self.mainControls playSongImmediately:songData];
+    }
 }
 - (void)webSocket:(PSWebSocket *)webSocket didFailWithError:(NSError *)error {
     NSLog(@"The websocket handshake/connection failed with an error: %@", error);

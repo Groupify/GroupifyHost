@@ -62,11 +62,26 @@
     return self;
 }
 
+- (void)updateQueue:(NSString *)queueData
+{
+    BOOL queueWasEmpty = [self.queue queueIsEmpty];
+    [self.queue updateQueueWithData:queueData];
+    if (queueWasEmpty) {
+        [self playNextSong];
+    }
+}
+
+- (void)updateQueueWithArray:(NSArray *)queueData
+{
+    BOOL queueWasEmpty = [self.queue queueIsEmpty];
+    [self.queue updateQueueWithArray:queueData];
+    if (queueWasEmpty) {
+        [self playNextSong];
+    }
+}
+
 - (void)playMusic
 {
-    // read in sample data file
-    NSData *jsonInfo = [NSData dataWithContentsOfFile:[@"~/test_data.json" stringByExpandingTildeInPath]];
-    [self.queue updateQueueWithData:jsonInfo];
     [self playNextSong];
 }
 
@@ -83,6 +98,26 @@
         [self.musicPlayerVC currentSong:newSong];
         [self.musicPlayerVC currentQueue:self.queue];
     }
+}
+
+- (void)playSongImmediately:(NSDictionary *)songInfo
+{
+    Song *newSong = [[Song alloc] initWithSongName:songInfo[@"songName"]
+                                            artist:songInfo[@"artist"]
+                                             album:songInfo[@"album"]
+                                       contributor:songInfo[@"contributor"]
+                                          trackURI:songInfo[@"uri"]
+                                       albumArtURL:songInfo[@"albumArt"]
+                                            songID:[songInfo[@"id"] integerValue]
+                                            length:[songInfo[@"length"] integerValue]];
+    
+    // build and execute AppleScript to play said song
+    [self queueNextSong:newSong.spotifyURI];
+    [self.playNext executeAndReturnError:nil];
+    
+    // update the view controller
+    [self.musicPlayerVC currentSong:newSong];
+    [self.musicPlayerVC currentQueue:self.queue];
 }
 
 - (void)queueNextSong:(NSString *)songURI

@@ -14,6 +14,9 @@
 
 - (void)playMusic;
 - (void)playNextSong;
+- (void)updateQueue:(NSString *)queueData;
+- (void)updateQueueWithArray:(NSArray *)queueData;
+- (void)playSongImmediately:(NSDictionary *)songInfo;
 - (instancetype)initWithMusicPlayerViewController:(MusicPlayerViewController *)musicPlayerVC;
 
 @end

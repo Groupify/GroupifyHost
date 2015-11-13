@@ -30,14 +30,10 @@
     [newSongs addObject:newSong];
 }
 
-- (void)updateQueueWithData:(NSData *)queueData;
+- (void)updateQueueWithArray:(NSArray *)queueArray
 {
-    id queueJSONObject = [NSJSONSerialization JSONObjectWithData:queueData
-                                                         options:0
-                                                           error:nil];
-    NSArray *songData = ((NSDictionary *)queueJSONObject)[@"songs"];
     NSMutableArray *newSongs = [[NSMutableArray alloc] init];
-    for (NSDictionary *songInfo in songData) {
+    for (NSDictionary *songInfo in queueArray) {
         if (self.songs) {
             NSUInteger songIndex = [self.songs indexOfObjectPassingTest:^BOOL(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                 Song *currentSong = (Song *) obj;
@@ -57,6 +53,16 @@
         }
     }
     self.songs = newSongs;
+
+}
+
+- (void)updateQueueWithData:(NSString *)queueData
+{
+    id queueJSONObject = [NSJSONSerialization JSONObjectWithData:[queueData dataUsingEncoding:NSUTF8StringEncoding]
+                                                         options:0
+                                                           error:nil];
+    NSArray *songData = ((NSDictionary *)queueJSONObject)[@"songs"];
+    [self updateQueueWithArray:songData];
 }
 
 - (Song *)nextSongInQueue

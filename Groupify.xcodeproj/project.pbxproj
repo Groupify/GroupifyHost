@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		203FDDF21BF5A083004147A8 /* SpotifyControlsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 203FDDF11BF5A083004147A8 /* SpotifyControlsTest.m */; };
 		2046D7431BAE6A0000FFACF9 /* SpotifyControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 2046D7421BAE6A0000FFACF9 /* SpotifyControls.m */; };
 		2046D7471BB09DC300FFACF9 /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = 2046D7461BB09DC300FFACF9 /* Song.m */; };
 		20667DA51BAE0BDF00AE2C14 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20667DA41BAE0BDF00AE2C14 /* AppDelegate.m */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		203FDDF11BF5A083004147A8 /* SpotifyControlsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpotifyControlsTest.m; path = ../Groupify/SpotifyControlsTest.m; sourceTree = "<group>"; };
 		2046D7411BAE6A0000FFACF9 /* SpotifyControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpotifyControls.h; sourceTree = "<group>"; };
 		2046D7421BAE6A0000FFACF9 /* SpotifyControls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpotifyControls.m; sourceTree = "<group>"; };
 		2046D7451BB09DC300FFACF9 /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Song.h; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 		20667DB61BAE0BDF00AE2C14 /* GroupifyTests */ = {
 			isa = PBXGroup;
 			children = (
+				203FDDF11BF5A083004147A8 /* SpotifyControlsTest.m */,
 				20667DB71BAE0BDF00AE2C14 /* GroupifyTests.m */,
 				20667DB91BAE0BDF00AE2C14 /* Info.plist */,
 			);
@@ -321,6 +324,7 @@
 			files = (
 				20667DB81BAE0BDF00AE2C14 /* GroupifyTests.m in Sources */,
 				209652A11BEC7252002CC459 /* MusicPlayerViewController.m in Sources */,
+				203FDDF21BF5A083004147A8 /* SpotifyControlsTest.m in Sources */,
 				208C84231BE9B34F0045FAF2 /* Queue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,6 +438,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				INFOPLIST_FILE = Groupify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nikiwells.Groupify;
@@ -450,6 +455,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				INFOPLIST_FILE = Groupify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nikiwells.Groupify;

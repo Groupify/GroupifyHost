@@ -14,7 +14,8 @@
 
 @interface Queue : NSObject <NSTableViewDataSource>
 
-- (void)updateQueueWithData:(NSData *)queueData;
+- (void)updateQueueWithData:(NSString *)queueData;
+- (void)updateQueueWithArray:(NSArray *)queueArray;
 - (Song *)nextSongInQueue;
 - (NSArray *)currentQueue;
 - (BOOL)queueIsEmpty;

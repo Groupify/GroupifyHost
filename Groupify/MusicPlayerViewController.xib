@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9059"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9060"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="MusicPlayerViewController">
@@ -40,7 +40,7 @@
                         <constraint firstAttribute="width" constant="80" id="vew-PH-fnj"/>
                     </constraints>
                     <animations/>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="EEE694B3-9EDD-43DB-BE97-9C5B45E5EA55" id="XCU-V9-Pjg"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="49032331-0EBF-47C7-A84F-C486019CFD0A" id="XCU-V9-Pjg"/>
                 </imageView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JQr-Xc-cXC">
                     <rect key="frame" x="154" y="202" width="228" height="17"/>
@@ -176,7 +176,7 @@
         </view>
     </objects>
     <resources>
-        <image name="EEE694B3-9EDD-43DB-BE97-9C5B45E5EA55" width="640" height="640">
+        <image name="49032331-0EBF-47C7-A84F-C486019CFD0A" width="640" height="640">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
