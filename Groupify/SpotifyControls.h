@@ -14,6 +14,7 @@
 
 - (void)playMusic;
 - (void)playNextSong;
+- (BOOL)queueIsEmpty;
 - (void)updateQueue:(NSString *)queueData;
 - (void)updateQueueWithArray:(NSArray *)queueData;
 - (void)playSongImmediately:(NSDictionary *)songInfo;

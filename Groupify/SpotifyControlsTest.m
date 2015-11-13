@@ -28,16 +28,41 @@
     [super tearDown];
 }
 
+- (NSString *)getPlayerState
+{
+    NSAppleScript *scriptPlaying = [[NSAppleScript alloc] initWithSource:@"tell application \"Spotify\" to get player state"];
+    NSAppleEventDescriptor *playerState = [scriptPlaying executeAndReturnError:nil];
+    return [playerState stringValue];
+}
+
+- (void)pauseMusic
+{
+    NSAppleScript *pauseMusic = [[NSAppleScript alloc] initWithSource:@"tell application \"Spotify\" to pause"];
+    [pauseMusic executeAndReturnError:nil];
+}
+
 - (void)testUpdateQueue {
-    NSData *jsonInfo = [NSData dataWithContentsOfFile:[@"~/test_data.json" stringByExpandingTildeInPath]];
+    NSString *jsonInfo = [NSString stringWithContentsOfFile:[@"~/test_data.json" stringByExpandingTildeInPath] encoding:NSUTF8StringEncoding error:nil];
     [self.spotifyPlayer updateQueue:jsonInfo];
     
+    // assert queue nonempty
+    XCTAssertFalse([self.spotifyPlayer queueIsEmpty]);
+    
+    NSString *playerState = [self getPlayerState];
+    // assert song is playing
+    XCTAssertTrue([playerState isEqualToString:@"kPSP"]);
+    
+    [self pauseMusic];
 }
 
 - (void)testPlayMusic {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
     [self.spotifyPlayer playMusic];
+    
+    NSString *playerState = [self getPlayerState];
+    // assert song is playing
+    XCTAssertTrue([playerState isEqualToString:@"kPSP"]);
 }
 
 @end

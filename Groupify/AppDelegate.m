@@ -52,8 +52,8 @@
     
     self.mainControls = [[SpotifyControls alloc] initWithMusicPlayerViewController:self.musicPlayerVC];
     
-    NSString *jsonInfo = [NSString stringWithContentsOfFile:[@"~/test_data.json" stringByExpandingTildeInPath] encoding:NSUTF8StringEncoding error:nil];
-    [self.mainControls updateQueue:jsonInfo];
+    NSString *jsonInfo = [NSString stringWithContentsOfFile:[@"~/test_server_data.json" stringByExpandingTildeInPath] encoding:NSUTF8StringEncoding error:nil];
+//    [self webSocket:self.socket didReceiveMessage:jsonInfo];
 }
 
 - (void)printToConsole {
@@ -90,11 +90,9 @@
 
 - (void)webSocketDidOpen:(PSWebSocket *)webSocket {
     NSLog(@"The websocket handshake completed and is now open!");
-    [webSocket send:@"{ \"action\": \"ping\", \"identity\": \"host\", \"data\": { \"message\": \"Hi there backend!\"} }"];
-    sleep(10);
-    NSString *jsonInfo = [NSString stringWithContentsOfFile:[@"~/test_immediate_song_data.json" stringByExpandingTildeInPath] encoding:NSUTF8StringEncoding error:nil];
-    [self webSocket:self.socket didReceiveMessage:jsonInfo];
+    [webSocket send:@"{ \"action\": \"hello\", \"identity\": \"host\", \"data\": { \"message\": \"Hi there backend!\"} }"];
 }
+
 - (void)webSocket:(PSWebSocket *)webSocket didReceiveMessage:(id)message {
     NSLog(@"The websocket received a message: %@", message);
     id queueJSONObject = [NSJSONSerialization JSONObjectWithData:[message dataUsingEncoding:NSUTF8StringEncoding]
@@ -102,7 +100,7 @@
                                                            error:nil];
     NSDictionary *data = (NSDictionary *)queueJSONObject;
     NSString *action = data[@"action"];
-    if ([action isEqualToString:@"update"]) {
+    if ([action isEqualToString:@"update-queue"]) {
         NSArray *songs = data[@"data"][@"songs"];
         [self.mainControls updateQueueWithArray:songs];
     } else if ([action isEqualToString:@"playImmediately"]) {
@@ -110,9 +108,11 @@
         [self.mainControls playSongImmediately:songData];
     }
 }
+
 - (void)webSocket:(PSWebSocket *)webSocket didFailWithError:(NSError *)error {
     NSLog(@"The websocket handshake/connection failed with an error: %@", error);
 }
+
 - (void)webSocket:(PSWebSocket *)webSocket didCloseWithCode:(NSInteger)code reason:(NSString *)reason wasClean:(BOOL)wasClean {
     NSLog(@"The websocket closed with code: %@, reason: %@, wasClean: %@", @(code), reason, (wasClean) ? @"YES" : @"NO");
 }

@@ -128,4 +128,9 @@
     [self.playNext compileAndReturnError:nil];
 }
 
+- (BOOL)queueIsEmpty
+{
+    return [self.queue queueIsEmpty];
+}
+
 @end
